@@ -21,6 +21,10 @@
                 p.errcheck
                 p.gofumpt
               ];
+              shellHook=''
+                export GOROOT=${p.go.outPath}/share/go
+                unset GOPATH
+          '';
             };
           };
         }
